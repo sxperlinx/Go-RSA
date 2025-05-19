@@ -3,7 +3,7 @@ package lcm
 import (
 	"math"
 
-	"github.com/sxperlinx/Go-rsa/math/gcd"
+	"github.com/sxperlinx/Go-RSA/math/gcd"
 )
 
 func Lcm(a, b int64) int64 {
