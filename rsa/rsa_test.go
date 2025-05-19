@@ -70,6 +70,28 @@ func TestEncryptDecrypt(t *testing.T) {
 	}
 }
 
+func TestKeyGen(t *testing.T) {
+	keyPair, err := GenerateKeyPair()
+	if err != nil {
+		t.Fatalf("Failed to generate key pair: %v", err)
+	}
+
+	m := "Hello, RSA!"
+	ciphertext, err := EncryptPub([]rune(m), keyPair.PublicKey)
+	if err != nil {
+		t.Fatalf("Failed to encrypt message: %v", err)
+	}
+
+	decrypted, err := DecryptPriv(ciphertext, keyPair.PrivateKey)
+	if err != nil {
+		t.Fatalf("Failed to decrypt message: %v", err)
+	}
+
+	if decrypted != m {
+		t.Fatalf("Decrypted message does not match original: got %q, want %q", decrypted, m)
+	}
+}
+
 func FuzzRsa(f *testing.F) {
 	for _, rsaTestInput := range rsaTestData {
 		f.Add(rsaTestInput.input)

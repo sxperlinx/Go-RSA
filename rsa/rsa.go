@@ -2,7 +2,7 @@ package rsa
 
 import (
 	"errors"
-	modular "github.com/sxperlinx/Go-RSA/math/modular"
+	"github.com/sxperlinx/Go-RSA/math/modular"
 )
 
 var ErrorFailedToEncrypt = errors.New("Failed to encrypt")
@@ -22,6 +22,10 @@ func Encrypt(message []rune, publicExponent, modulus int64) ([]rune, error) {
 	return encrypted, nil
 }
 
+func EncryptPub(message []rune, publicKey Key) ([]rune, error) {
+	return Encrypt(message, publicKey.Exponent, publicKey.Modulus)
+}
+
 func Decrypt(encrypted []rune, privateExponent, modulus int64) (string, error) {
 	var decrypted []rune
 
@@ -34,4 +38,8 @@ func Decrypt(encrypted []rune, privateExponent, modulus int64) (string, error) {
 	}
 
 	return string(decrypted), nil
+}
+
+func DecryptPriv(encrypted []rune, privateKey Key) (string, error) {
+	return Decrypt(encrypted, privateKey.Exponent, privateKey.Modulus)
 }
