@@ -2,7 +2,7 @@ package rsa
 
 import (
 	"errors"
-	modular "github.com/sxperlinx/Go-rsa/math/modular"
+	modular "github.com/sxperlinx/Go-RSA/math/modular"
 )
 
 var ErrorFailedToEncrypt = errors.New("Failed to encrypt")
