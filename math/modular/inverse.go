@@ -3,7 +3,7 @@ package modular
 import (
 	"errors"
 
-	"github.com/sxperlinx/Go-rsa/math/gcd"
+	"github.com/sxperlinx/Go-RSA/math/gcd"
 )
 
 var ErrorInverse = errors.New("no Modular Inverse exists")
