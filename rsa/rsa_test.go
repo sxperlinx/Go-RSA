@@ -3,9 +3,9 @@ package rsa
 import (
 	"testing"
 
-	"github.com/sxperlinx/Go-rsa/math/gcd"
-	"github.com/sxperlinx/Go-rsa/math/lcm"
-	"github.com/sxperlinx/Go-rsa/math/modular"
+	"github.com/sxperlinx/Go-RSA/math/gcd"
+	"github.com/sxperlinx/Go-RSA/math/lcm"
+	"github.com/sxperlinx/Go-RSA/math/modular"
 )
 
 var rsaTestData = []struct {
