@@ -8,8 +8,8 @@ Implementation of RSA in Go.
 
 ## Usage
 
-1. Install the package `go get github.com/sxperlinx/Go-rsa`
-2. Import it `import "github.com/sxperlinx/Go-rsa/rsa"`
+1. Install the package `go get github.com/sxperlinx/Go-RSA`
+2. Import it `import "github.com/sxperlinx/Go-RSA/rsa"`
 3. The package icludes a function `Encrypt` and `Decrypt`.
 
 ## Tests
