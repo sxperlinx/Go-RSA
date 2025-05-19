@@ -2,6 +2,10 @@
 
 Implementation of RSA in Go.
 
+> [!NOTE]
+>
+> This implementation only supports encryption and decryption but not key-generation.
+
 ## Usage
 
 1. Install the package `go get github.com/sxperlinx/Go-rsa`
